@@ -12,7 +12,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
 	switch (msg) {
 	case WM_CREATE: {
 		//When Window Create
+		window->setHWND(hwnd);
 		window->onCreate();
+	
 		break;
 	}
 	case WM_DESTROY: {
@@ -110,6 +112,18 @@ bool Window::isRun()
 
 Window::~Window()
 {
+}
+
+RECT Window::getClientWindowRect()
+{
+	RECT rc;
+	::GetClientRect(this->m_hwnd, &rc);
+	return rc;
+}
+
+void Window::setHWND(HWND hwnd)
+{
+	this->m_hwnd = hwnd;
 }
 
 void Window::onCreate()
