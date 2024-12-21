@@ -3,6 +3,10 @@
 
 class AppWindow : public Window
 {
+public:
+	AppWindow();
+	~AppWindow();
+
 	// Window을(를) 통해 상속됨
 	void onCreate() override;
 	void onUpdate() override;
