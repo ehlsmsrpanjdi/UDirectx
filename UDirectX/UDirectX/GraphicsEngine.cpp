@@ -36,10 +36,7 @@ bool GraphicsEngine::init()
 
 	m_d3d_device->QueryInterface(__uuidof(IDXGIDevice), (void**)&m_dxgi_device);
 	m_dxgi_device->GetParent(__uuidof(IDXGIAdapter), (void**)&m_dxgi_adapter);
-	m_dxgi_adapter->GetParent(__uuidof(IDXGIFactory), (void**)m_dxgi_factory);
-	/*m_dxgi_factory->CreateSwapChain();*/
-
-
+	m_dxgi_adapter->GetParent(__uuidof(IDXGIFactory), (void**)&m_dxgi_factory);
 	return true;
 }
 
