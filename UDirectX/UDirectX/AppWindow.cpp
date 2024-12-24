@@ -49,7 +49,7 @@ void AppWindow::onUpdate()
 {
 	Window::onUpdate();
 	GraphicsEngine::get()->getImmediateDeviceContext()->clearRenderTargetColor(this->m_swap_chain,
-		1, 0, 0, 0);
+		0, 0.3f, 0.4f, 1);
 
 	RECT rc = this->getClientWindowRect();
 	GraphicsEngine::get()->getImmediateDeviceContext()->setViewportSize(rc.right - rc.left, rc.bottom - rc.top);
