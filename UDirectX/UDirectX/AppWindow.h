@@ -1,6 +1,9 @@
 #pragma once
 #include "Window.h"
 #include "SwapChain.h"
+#include "DeviceContext.h"
+
+
 class AppWindow : public Window
 {
 public:

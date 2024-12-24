@@ -82,12 +82,14 @@ bool Window::init()
 bool Window::broadcase() {
 
 	MSG msg;
+	window->onUpdate();
+
+
 	while (::PeekMessage(&msg, NULL, 0,0,PM_REMOVE)) {
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
 	}
 
-	window->onUpdate();
 
 	Sleep(0);
 
