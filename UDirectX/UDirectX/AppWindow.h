@@ -2,7 +2,7 @@
 #include "Window.h"
 #include "SwapChain.h"
 #include "DeviceContext.h"
-
+#include "VertexBuffer.h"
 
 class AppWindow : public Window
 {
@@ -15,6 +15,7 @@ public:
 	void onUpdate() override;
 	void onDestroy() override;
 private:
-	SwapChain* m_swap_chain;
+	SwapChain* m_swap_chain = nullptr;
+	VertexBuffer* m_vb = nullptr;
 };
 

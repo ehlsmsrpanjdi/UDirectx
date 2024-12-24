@@ -32,10 +32,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
 
 
 	}
-
-
-
-
+	return NULL;
 }
 
 bool Window::init()
